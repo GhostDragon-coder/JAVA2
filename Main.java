@@ -35,14 +35,14 @@ public class Main {
      */
     public static String calculate(float x, float y, String operation) {
         return switch (operation) {
-            case "+" -> String.format("%.2f", x + y);
-            case "-" -> String.format("%.2f", x - y);
-            case "*" -> String.format("%.2f", x * y);
+            case "+" -> String.format("%.4f", x + y);
+            case "-" -> String.format("%.4f", x - y);
+            case "*" -> String.format("%.4f", x * y);
             case "/" -> {
                 if (y == 0) {
                     yield "Ошибка: деление на ноль!";
                 }
-                yield String.format("%.2f", x / y);
+                yield String.format("%.4f", x / y);
             }
             default -> "Ошибка ввода! Недопустимая операция";
         };
